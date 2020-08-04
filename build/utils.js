@@ -12,10 +12,10 @@ exports.assetsPath = function (_path) {
   return path.posix.join(assetsSubDirectory, _path)
 }
 
-// function resolveResource(url) {
-//   console.log(path.resolve(__dirname, '../src/assets/css/', url))
-//   return path.resolve(__dirname, '../src/assets/css/', url)
-// }
+function resolveResource(url) {
+  console.log(path.resolve(__dirname, '../src/assets/css/', url))
+  return path.resolve(__dirname, '../src/assets/css/', url)
+}
 
 exports.cssLoaders = function (options) {
   options = options || {}
@@ -65,13 +65,13 @@ exports.cssLoaders = function (options) {
     postcss: generateLoaders(),
     less: generateLoaders('less'),
     sass: generateLoaders('sass', { indentedSyntax: true }),
-    scss: generateLoaders('sass'),
-    // scss: generateLoaders('sass').concat({
-    //   loader: 'sass-resources-loader',
-    //   options: {
-    //     resources: [resolveResource('variables.scss')]
-    //   }
-    // }),
+    // scss: generateLoaders('sass'),
+    scss: generateLoaders('sass').concat({
+      loader: 'sass-resources-loader',
+      options: {
+        resources: [resolveResource('variables.scss')]
+      }
+    }),
     stylus: generateLoaders('stylus'),
     styl: generateLoaders('stylus')
   }
