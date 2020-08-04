@@ -1,0 +1,100 @@
+body,
+html {
+  height: 100%;
+}
+body {
+  background-color: #fff;
+  color: #666;
+  font-size: 14px;
+  color: #333;
+}
+* {
+  box-sizing: border-box;
+}
+body,
+p,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+dt,
+dd {
+  margin: 0;
+}
+ul,
+ol,
+li {
+  padding: 0;
+}
+ul,
+ol {
+  list-style-type: none;
+}
+button {
+  outline: none;
+}
+$color: #ee7a23;
+.themeColor {
+  color: $color;
+}
+.colorSub {
+  color: #f00;
+}
+.colorBgSub {
+  background-color: #f00;
+}
+
+//公共字体样式
+.black {
+  color: #666;
+}
+.primary {
+  color: #409eff;
+}
+.success {
+  color: #67c23a;
+}
+.warning {
+  color: #eb9e05;
+}
+.danger {
+  color: #fa5555;
+}
+.info {
+  color: #878d99;
+}
+
+.clearfix {
+  clear: both;
+}
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 1s;
+}
+
+.animate-enter,
+.animate-leave-to {
+  transform: translate(0, 100%);
+}
+.animate-enter-active,
+.animate-leave-active {
+  transition: all 0.5s;
+}
+
+[v-cloak] {
+  display: none;
+}

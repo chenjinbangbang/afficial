@@ -1,0 +1,79 @@
+{
+  "id": "487559",
+  "name": "mjpai",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "mjpai",
+  "glyphs": [
+    {
+      "icon_id": "774440",
+      "name": "箭头2",
+      "font_class": "jiantou2",
+      "unicode": "e658",
+      "unicode_decimal": 58968
+    },
+    {
+      "icon_id": "9147423",
+      "name": "聊天-线性",
+      "font_class": "chat-linear",
+      "unicode": "e708",
+      "unicode_decimal": 59144
+    },
+    {
+      "icon_id": "1120975",
+      "name": "人",
+      "font_class": "ren111",
+      "unicode": "e623",
+      "unicode_decimal": 58915
+    },
+    {
+      "icon_id": "3315097",
+      "name": "多人会议",
+      "font_class": "duorenhuiyi",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "12331654",
+      "name": "成功",
+      "font_class": "chenggong",
+      "unicode": "e664",
+      "unicode_decimal": 58980
+    },
+    {
+      "icon_id": "5072125",
+      "name": "电脑",
+      "font_class": "diannao",
+      "unicode": "e63d",
+      "unicode_decimal": 58941
+    },
+    {
+      "icon_id": "904492",
+      "name": "question",
+      "font_class": "question",
+      "unicode": "e73a",
+      "unicode_decimal": 59194
+    },
+    {
+      "icon_id": "1610933",
+      "name": "心",
+      "font_class": "xin1",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
+      "icon_id": "2472500",
+      "name": "心",
+      "font_class": "xin2",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "1222472",
+      "name": "eglass-cart",
+      "font_class": "cart",
+      "unicode": "e616",
+      "unicode_decimal": 58902
+    }
+  ]
+}

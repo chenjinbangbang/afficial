@@ -1,0 +1,289 @@
+.home {
+  .el-carousel {
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+
+  .home-data {
+    width: 1200px;
+    margin: 0 auto;
+    border-bottom: 1px solid #ccc;
+    ul {
+      display: flex;
+      padding: 50px 0;
+      li {
+        flex: 1;
+        display: flex;
+        transition: transform 0.5s;
+        &:hover {
+          transform: translateY(-10px);
+        }
+        .iconfont {
+          font-size: 70px;
+          color: #999;
+        }
+        .data-text {
+          margin-left: 30px;
+          .data-text-num {
+            font-size: 30px;
+            color: $theme;
+          }
+          .data-text-note {
+            color: #999;
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  .service {
+    width: 1200px;
+    margin: 40px auto 0 auto;
+    text-align: center;
+    .service-title {
+      font-size: 34px;
+    }
+    .service-note {
+      color: #999;
+      margin-top: 20px;
+    }
+    .service-data {
+      margin-top: 30px;
+      ul {
+        display: flex;
+        li {
+          flex: 1;
+          &:hover {
+            .service-img {
+              transform: translateY(-8px);
+            }
+            .service-btn {
+              background-color: $theme;
+              color: #fff;
+              border: 1px solid transparent;
+            }
+          }
+          .service-img {
+            transition: all 0.3s;
+            width: 60px;
+          }
+          .service-li-title {
+            font-size: 18px;
+            margin: 15px 0;
+            color: #666;
+          }
+          .service-li-text {
+            margin-bottom: 10px;
+            color: #666;
+          }
+          .service-btn {
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            border: 1px solid #999;
+            border-radius: 4px;
+            color: #666;
+            margin: 20px auto;
+            transition: all 0.5s;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  .scene {
+    height: 800px;
+    margin-top: 40px;
+    padding-top: 40px;
+    position: relative;
+    &:before {
+      content: "";
+      background: url("~@/assets/imgs/home_bg.jpg") no-repeat;
+      background-size: cover;
+      // opacity: 0.5;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      z-index: -1;
+      // filter: blur(2px);
+    }
+
+    .scene-title {
+      font-size: 34px;
+      color: #fff;
+      text-align: center;
+    }
+    .scene-note {
+      color: #ccc;
+      margin-top: 20px;
+      text-align: center;
+    }
+    .scene-way {
+      margin-top: 50px;
+      ul {
+        display: flex;
+        justify-content: center;
+        li {
+          width: 240px;
+          height: 80px;
+          border-radius: 8px;
+          background-color: rgba(255, 255, 255, 0.2);
+          color: #fff;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-left: 70px;
+          transition: all 0.5s;
+          cursor: pointer;
+          &:hover,
+          &.active {
+            background-color: $theme;
+          }
+          img {
+            width: 60px;
+          }
+          .scene-way-right {
+            margin-left: 10px;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+
+    .scene-content {
+      width: 1200px;
+      margin: 50px auto;
+      display: flex;
+      &:hover {
+        .scene-content-left {
+          img {
+            transform: scale(1.03, 1.03);
+          }
+        }
+        .scene-content-right {
+          .scene-content-title {
+            color: $theme;
+          }
+        }
+      }
+
+      .scene-content-left {
+        flex: 3;
+        img {
+          transition: all 0.3s;
+          width: 100%;
+        }
+      }
+      .scene-content-right {
+        flex: 2;
+        margin-left: 50px;
+        .scene-content-title {
+          transition: all 0.3s;
+          font-size: 34px;
+          font-weight: bold;
+          color: #fff;
+          margin-top: 40px;
+        }
+        .scene-content-note {
+          color: #ddd;
+          margin-top: 50px;
+          line-height: 26px;
+        }
+        .scene-btn {
+          width: 150px;
+          height: 50px;
+          background-color: $theme;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #fff;
+          border-radius: 30px;
+          margin-top: 100px;
+          cursor: pointer;
+          transition: width 0.3s;
+          &:hover {
+            width: 160px;
+          }
+          .scene-btn-text {
+            font-size: 16px;
+          }
+          .iconfont {
+            margin-left: 4px;
+            font-size: 26px;
+            margin-top: 8px;
+          }
+        }
+      }
+    }
+  }
+
+  .brand {
+    width: 1200px;
+    margin: 40px auto 60px auto;
+    text-align: center;
+    .brand-title {
+      font-size: 34px;
+    }
+    .brand-note {
+      color: #999;
+      margin-top: 20px;
+    }
+    .brand-list {
+      margin-top: 60px;
+      ul {
+        display: flex;
+        justify-content: space-between;
+        li {
+          width: 230px;
+          height: 300px;
+          border-radius: 8px;
+          padding: 40px 10px;
+          position: relative;
+          background-color: rgba(0, 0, 0, 0.5);
+          transition: all 0.5s;
+          &:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+            .brand-content {
+              .brand-content-title {
+                color: $theme;
+              }
+            }
+          }
+
+          .brand-bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            z-index: -1;
+          }
+          .brand-content {
+            color: #fff;
+            text-align: center;
+            .brand-content-title {
+              transition: all 0.3s;
+              font-size: 20px;
+            }
+            .brand-content-line {
+              width: 30px;
+              height: 1px;
+              background-color: #fff;
+              margin: 8px auto;
+            }
+            .brand-content-main {
+              margin: 30px 24px;
+              line-height: 26px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
