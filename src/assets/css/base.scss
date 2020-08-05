@@ -98,3 +98,50 @@ a:visited {
 [v-cloak] {
   display: none;
 }
+
+// 动画按钮
+.me-btn {
+  width: 160px;
+  height: 46px;
+  background-color: $theme;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: width 0.3s;
+  &:hover {
+    width: 170px;
+    .iconfont {
+      transform: translateX(10px);
+    }
+  }
+  .me-btn-text {
+    font-size: 16px;
+  }
+  .iconfont {
+    margin-left: 4px;
+    font-size: 26px;
+    margin-top: 8px;
+    transition: all 0.3s;
+  }
+}
+
+// 普通按钮
+.me-base-btn {
+  width: 100px;
+  // height: 30px;
+  // line-height: 30px;
+  padding: 6px 0;
+  border: 1px solid #999;
+  border-radius: 4px;
+  color: #666;
+  transition: all 0.5s;
+  cursor: pointer;
+  text-align: center;
+  &:hover {
+    background-color: $theme;
+    border: 1px solid transparent;
+  }
+}

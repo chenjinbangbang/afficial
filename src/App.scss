@@ -27,7 +27,7 @@
       .header-right {
         display: flex;
         flex-direction: column;
-        .contact {
+        .header-contact {
           margin-top: 10px;
           span {
             &:nth-child(1) {
@@ -70,5 +70,66 @@
 
   .content {
     margin-top: 100px;
+  }
+
+  .footer-contact {
+    background-color: #373c40;
+    color: #fff;
+    padding: 50px 0;
+    .contact-home {
+      width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      .contact-left {
+        display: flex;
+        .contact-icon {
+          img {
+            width: 60px;
+          }
+        }
+        .contact-info {
+          margin-left: 20px;
+          p {
+            font-weight: bold;
+            &:nth-child(1) {
+            }
+            &:nth-child(2) {
+              font-size: 18px;
+            }
+          }
+          .me-base-btn {
+            margin-top: 20px;
+            color: #fff;
+          }
+        }
+      }
+      .contact-right {
+        flex: 1;
+        margin-left: 40px;
+        padding-left: 40px;
+        border-left: 1px solid #555;
+        ul {
+          display: flex;
+          li {
+            flex: 1;
+            .contact-right-title {
+              font-size: 16px;
+            }
+            p {
+              color: #999;
+              margin-top: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    border-top: 1px solid #555;
+    padding: 40px 0;
+    text-align: center;
+    background-color: #373c40;
+    color: #999;
   }
 }

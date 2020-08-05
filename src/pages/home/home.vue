@@ -52,7 +52,7 @@
             <div class="service-li-text">批发商城</div>
             <div class="service-li-text">多用户商城</div>
             <div class="service-li-text">B2C基础商城</div>
-            <div class="service-btn">我要咨询</div>
+            <div class="me-base-btn">我要咨询</div>
           </li>
           <li>
             <img class="service-img" src="@/assets/imgs/home_icon2.png" alt />
@@ -62,7 +62,7 @@
             <div class="service-li-text">公众号开发</div>
             <div class="service-li-text">微分销系统</div>
             <div class="service-li-text">&nbsp;</div>
-            <div class="service-btn">我要咨询</div>
+            <div class="me-base-btn">我要咨询</div>
           </li>
           <li>
             <img class="service-img" src="@/assets/imgs/home_icon3.png" alt />
@@ -72,7 +72,7 @@
             <div class="service-li-text">EPR系统开发</div>
             <div class="service-li-text">分销系统开发</div>
             <div class="service-li-text">积分系统开发</div>
-            <div class="service-btn">我要咨询</div>
+            <div class="me-base-btn">我要咨询</div>
           </li>
           <li>
             <img class="service-img" src="@/assets/imgs/home_icon4.png" alt />
@@ -82,7 +82,7 @@
             <div class="service-li-text">原生APP开发</div>
             <div class="service-li-text">混合APP开发</div>
             <div class="service-li-text">&nbsp;</div>
-            <div class="service-btn">我要咨询</div>
+            <div class="me-base-btn">我要咨询</div>
           </li>
         </ul>
       </div>
@@ -126,8 +126,8 @@
           <div
             class="scene-content-note"
           >基于万狼科技独立研发的网站开发 后台、WFSHOP、WLSHOP、 WLCMS系统，服务化的业务系统、组件化拼装体系、集群开发模式</div>
-          <div class="scene-btn">
-            <span class="scene-btn-text">我要咨询</span>
+          <div class="me-btn">
+            <span class="me-btn-text">我要咨询</span>
             <span class="iconfont icon-chat-linear"></span>
           </div>
         </div>
@@ -183,54 +183,88 @@
       </div>
     </div>
 
-    <div class="brand">
-      <div class="brand-title">开发流程</div>
-      <div class="brand-note">标准化操作流程，系统化开发，人性化服务，最大化提高效率</div>
-      <div class="brand-list">
+    <div class="process">
+      <div class="process-title">开发流程</div>
+      <div class="process-note">标准化操作流程，系统化开发，人性化服务，最大化提高效率</div>
+      <div class="process-list">
         <ul>
           <li>
-            <img class="brand-bg" src="@/assets/imgs/brand_bg1.jpg" alt />
-            <div class="brand-content">
-              <div class="brand-content-title">50人技术团队</div>
-              <div class="brand-content-line"></div>
-              <div class="brand-content-main">万狼科技设计师、开发工程师必须有3年以上从业经验，每年负责各类大小项目超过30+</div>
+            <img class="process-img" src="@/assets/imgs/process1.png" alt />
+            <div class="process-content">
+              <div class="process-content-title">
+                <span class="process-text">需求沟通</span>
+                <span class="iconfont icon-jiantou2 icon1"></span>
+                <span class="iconfont icon-jiantou2 icon2"></span>
+              </div>
+              <div class="process-content-main">了解客户需求，根据行业及需求制定最佳的解决方案。</div>
             </div>
           </li>
           <li>
-            <img class="brand-bg" src="@/assets/imgs/brand_bg2.jpg" alt />
-            <div class="brand-content">
-              <div class="brand-content-title">高效的开发流程</div>
-              <div class="brand-content-line"></div>
-              <div class="brand-content-main">系统化的开发流程造就了高品质的产品，万狼科技严格遵循开发流程，注重每一个环节，最大化提高产品的品质和效率</div>
+            <img class="process-img" src="@/assets/imgs/process2.png" alt />
+            <div class="process-content">
+              <div class="process-content-title">
+                <span class="process-text">视觉设计</span>
+                <span class="iconfont icon-jiantou2 icon1"></span>
+                <span class="iconfont icon-jiantou2 icon2"></span>
+              </div>
+              <div class="process-content-main">多元化设计，包括版面、视觉、色彩、元素以及整体协调性。</div>
             </div>
           </li>
           <li>
-            <img class="brand-bg" src="@/assets/imgs/brand_bg3.jpg" alt />
-            <div class="brand-content">
-              <div class="brand-content-title">完善的测试系统</div>
-              <div class="brand-content-line"></div>
-              <div class="brand-content-main">专业的软件测试人员对产品得各个方面进行反复的测试，确保每个产品具备高强度的稳定性与安全性，再交付到客户手上</div>
+            <img class="process-img" src="@/assets/imgs/process3.png" alt />
+            <div class="process-content">
+              <div class="process-content-title">
+                <span class="process-text">产品开发</span>
+                <span class="iconfont icon-jiantou2 icon1"></span>
+                <span class="iconfont icon-jiantou2 icon2"></span>
+              </div>
+              <div class="process-content-main">前端开发、后台编写、功能开发与实现，打造舒适交互界面与强大功能设定。</div>
             </div>
           </li>
           <li>
-            <img class="brand-bg" src="@/assets/imgs/brand_bg4.jpg" alt />
-            <div class="brand-content">
-              <div class="brand-content-title">5000个客户的选择</div>
-              <div class="brand-content-line"></div>
-              <div class="brand-content-main">10年间，万狼科技已服务超过5000个客户，8000多个成功案例，我们注重的不仅仅是数量，更注重质量</div>
+            <img class="process-img" src="@/assets/imgs/process4.png" alt />
+            <div class="process-content">
+              <div class="process-content-title">
+                <span class="process-text">功能测试</span>
+                <span class="iconfont icon-jiantou2 icon1"></span>
+                <span class="iconfont icon-jiantou2 icon2"></span>
+              </div>
+              <div class="process-content-main">不同终端、平台兼容性测试，功能、性能检测，高密度实地测试调整。</div>
             </div>
           </li>
           <li>
-            <img class="brand-bg" src="@/assets/imgs/brand_bg5.jpg" alt />
-            <div class="brand-content">
-              <div class="brand-content-title">科学高效的售后服务</div>
-              <div class="brand-content-line"></div>
-              <div class="brand-content-main">产品上线一年之内免费为客户维护，超过90%的客户在维护期过后继续选择由万狼科技提供的有偿维护服务。</div>
+            <img class="process-img" src="@/assets/imgs/process5.png" alt />
+            <div class="process-content">
+              <div class="process-content-title">
+                <span class="process-text">售后维护</span>
+                <!-- <span class="iconfont icon-jiantou2"></span> -->
+              </div>
+              <div class="process-content-main">项目完结后一年内免费维护，第二年起支付基本的人工成本维护费用。</div>
             </div>
           </li>
         </ul>
       </div>
+      <div class="process-btn">
+        <div class="me-btn">
+          <span class="me-btn-text">提交需求</span>
+          <span class="iconfont icon-jiantou-you"></span>
+        </div>
+      </div>
     </div>
+
+    <div class="plan">
+      <div class="plan-title">我们以设计构思精巧细节，以技术彰显独特魅力</div>
+      <div class="plan-note">为企业提供专业的互联网开发解决方案</div>
+      <div class="plan-btn">
+        <div class="me-btn">
+          <span class="me-btn-text">免费获取方案</span>
+        </div>
+      </div>
+    </div>
+
+    <el-backtop>
+      <i class="el-icon-arrow-up"></i>
+    </el-backtop>
   </div>
 </template>
 

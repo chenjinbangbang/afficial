@@ -6,6 +6,13 @@
   "description": "mjpai",
   "glyphs": [
     {
+      "icon_id": "7069158",
+      "name": "箭头-右",
+      "font_class": "jiantou-you",
+      "unicode": "e738",
+      "unicode_decimal": 59192
+    },
+    {
       "icon_id": "774440",
       "name": "箭头2",
       "font_class": "jiantou2",

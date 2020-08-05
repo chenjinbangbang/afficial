@@ -60,7 +60,7 @@
             .service-img {
               transform: translateY(-8px);
             }
-            .service-btn {
+            .me-base-btn {
               background-color: $theme;
               color: #fff;
               border: 1px solid transparent;
@@ -79,16 +79,8 @@
             margin-bottom: 10px;
             color: #666;
           }
-          .service-btn {
-            width: 100px;
-            height: 30px;
-            line-height: 30px;
-            border: 1px solid #999;
-            border-radius: 4px;
-            color: #666;
+          .me-base-btn {
             margin: 20px auto;
-            transition: all 0.5s;
-            cursor: pointer;
           }
         }
       }
@@ -195,29 +187,8 @@
           margin-top: 50px;
           line-height: 26px;
         }
-        .scene-btn {
-          width: 150px;
-          height: 50px;
-          background-color: $theme;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          color: #fff;
-          border-radius: 30px;
+        .me-btn {
           margin-top: 100px;
-          cursor: pointer;
-          transition: width 0.3s;
-          &:hover {
-            width: 160px;
-          }
-          .scene-btn-text {
-            font-size: 16px;
-          }
-          .iconfont {
-            margin-left: 4px;
-            font-size: 26px;
-            margin-top: 8px;
-          }
         }
       }
     }
@@ -284,6 +255,132 @@
           }
         }
       }
+    }
+  }
+
+  .process {
+    width: 1200px;
+    margin: 40px auto 60px auto;
+    text-align: center;
+    .process-title {
+      font-size: 34px;
+    }
+    .process-note {
+      color: #999;
+      margin-top: 20px;
+    }
+    .process-list {
+      margin-top: 40px;
+      ul {
+        display: flex;
+        li {
+          text-align: center;
+          flex: 1;
+
+          &:hover {
+            .process-content {
+              .process-content-title {
+                .icon-jiantou2 {
+                  &.icon1 {
+                    opacity: 0;
+                    transform: translateX(-50px);
+                  }
+                  &.icon2 {
+                    opacity: 1;
+                    transform: translateX(0);
+                  }
+                }
+              }
+            }
+          }
+
+          .process-img {
+            transition: all 0.3s;
+            width: 50px;
+          }
+          .process-content {
+            .process-content-title {
+              position: relative;
+              margin-top: 20px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              .process-text {
+                color: #666;
+                font-size: 16px;
+              }
+              .icon-jiantou2 {
+                position: absolute;
+                margin-top: 4px;
+                right: -20px;
+                font-size: 40px;
+                transition: all 0.3s;
+                &.icon1 {
+                  opacity: 1;
+                  color: #ccc;
+                  transform: translateX(0);
+                }
+                &.icon2 {
+                  opacity: 0;
+                  color: $theme;
+                  transform: translateX(-50px);
+                }
+              }
+            }
+            .process-content-main {
+              margin-top: 20px;
+              color: #999;
+              padding: 0 20px;
+            }
+          }
+        }
+      }
+    }
+
+    .process-btn {
+      margin-top: 50px;
+      .me-btn {
+        margin: auto;
+        .iconfont {
+          margin-top: 2px;
+          font-size: 20px;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+
+  .plan {
+    background: url("~@/assets/imgs/plan_bg.png") no-repeat;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0 20px 0;
+    .plan-title {
+      font-size: 36px;
+    }
+    .plan-note {
+      margin-top: 10px;
+      font-size: 20px;
+    }
+    .plan-btn {
+      margin-top: 20px;
+      .me-btn {
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .el-backtop {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: $theme;
+    border-radius: 8px;
+    .el-icon-arrow-up {
+      color: #fff;
+      font-size: 30px;
     }
   }
 }
