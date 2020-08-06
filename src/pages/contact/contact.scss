@@ -4,4 +4,87 @@
       width: 100%;
     }
   }
+
+  .contact-link {
+    width: 1200px;
+    margin: 100px auto;
+    ul {
+      display: flex;
+      text-align: center;
+      justify-content: space-around;
+      li {
+        width: 280px;
+        // padding: 0 20px;
+        // margin: 0 40px;
+        position: relative;
+
+        @keyframes flash {
+          from {
+            transform: scale(1, 1);
+            opacity: 0.6;
+          }
+          to {
+            transform: scale(300, 300);
+            opacity: 0;
+          }
+        }
+
+        &:hover {
+          .circle {
+            .c1 {
+              // transform: scale(300, 300);
+              // opacity: 0;
+              // transition: all 3s;
+              animation: flash 3s ease 0 infinite;
+            }
+            .c2 {
+              animation: flash 3s ease 1s infinite;
+            }
+            .c3 {
+              animation: flash 3s ease 2s infinite;
+            }
+          }
+        }
+
+        .circle {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          // background-color: #f00;
+          > div {
+            border-radius: 50%;
+            width: 1px;
+            height: 1px;
+            background-color: #666;
+            // opacity: 0.5;
+          }
+          .c1 {
+          }
+          .c2 {
+          }
+          .c3 {
+          }
+        }
+
+        .contact-link-icon {
+          width: 50px;
+        }
+        .contact-link-title {
+          margin: 20px 0;
+          font-size: 18px;
+        }
+        .contact-link-note {
+          color: #999;
+        }
+        .contact-link-code {
+          img {
+            width: 100px;
+          }
+        }
+      }
+    }
+  }
 }
