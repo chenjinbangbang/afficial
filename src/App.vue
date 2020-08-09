@@ -15,6 +15,68 @@
               <li :class="{active: $route.path === '/'}">
                 <router-link to="/">首页</router-link>
               </li>
+              <li
+                :class="{active: custommadeRouter.includes($route.path)}"
+                @mouseenter="mouseenter"
+                @mouseleave="mouseleave"
+              >
+                <router-link to="/construction">高端定制</router-link>
+
+                <transition name="accord">
+                  <div class="custommade-classify" v-show="custommadeShow">
+                    <ul>
+                      <li>
+                        <router-link to="/construction">
+                          <img src="@/assets/imgs/nav1.png" alt />
+                          <div class="classify-right">
+                            <div class="classify-title">网站定制</div>
+                            <div class="classify-note">全网型网站高端定制</div>
+                          </div>
+                        </router-link>
+                      </li>
+                      <li>
+                        <router-link to="/applet">
+                          <img src="@/assets/imgs/nav2.png" alt />
+                          <div class="classify-right">
+                            <div class="classify-title">小程序开发</div>
+                            <div class="classify-note">线上线下整合开发方案</div>
+                          </div>
+                        </router-link>
+                      </li>
+                      <!-- <li>
+                        <router-link to="/construction">
+                          <img src="@/assets/imgs/nav3.png" alt />
+                          <div class="classify-right">
+                            <div class="classify-title">公众号开发</div>
+                            <div class="classify-note">微信功能应用定制开发</div>
+                          </div>
+                        </router-link>
+                      </li>
+                      <li>
+                        <router-link to="/construction">
+                          <img src="@/assets/imgs/nav4.png" alt />
+                          <div class="classify-right">
+                            <div class="classify-title">APP定制</div>
+                            <div class="classify-note">全行业一体化解决方案</div>
+                          </div>
+                        </router-link>
+                      </li>
+                      <li>
+                        <router-link to="/construction">
+                          <img src="@/assets/imgs/nav5.png" alt />
+                          <div class="classify-right">
+                            <div class="classify-title">系统开发</div>
+                            <div class="classify-note">企业软件系统定制开发</div>
+                          </div>
+                        </router-link>
+                      </li>-->
+                    </ul>
+                  </div>
+                </transition>
+              </li>
+              <li :class="{active: $route.path === '/case'}">
+                <router-link to="/case">成功案例</router-link>
+              </li>
               <li :class="{active: $route.path === '/about'}">
                 <router-link to="/about">关于我们</router-link>
               </li>
@@ -86,13 +148,51 @@
     </div>
 
     <footer class="footer">Coypright @ 万狼科技 -深圳网站建设 粤ICP备15011227号-1 版权所有</footer>
+
+    <div class="contact-way">
+      <ul>
+        <li>
+          <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1312480793&site=qq&menu=yes">
+            <i class="iconfont icon-QQ"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <el-backtop>
+      <ul>
+        <li>
+          <i class="el-icon-arrow-up"></i>
+        </li>
+      </ul>
+    </el-backtop>
+
+    <!-- <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1312480793&site=qq&menu=yes">
+      <img border="0" src="http://wpa.qq.com/pa?p=2:1312480793:41" alt="联系客服1" title="联系客服1" />
+    </a>-->
   </div>
 </template>
 
 <script>
 export default {
   name: "App",
+  data() {
+    return {
+      custommadeShow: false, // 高端定制类型弹框的显示与隐藏
+      custommadeRouter: ["/construction", "/applet"], // 高端定制的路由
+    };
+  },
   created() {},
+  methods: {
+    mouseenter() {
+      this.custommadeShow = true;
+      // console.log("mouseenter");
+    },
+    mouseleave() {
+      this.custommadeShow = false;
+      // console.log("mouseleave");
+    },
+  },
 };
 </script>
 

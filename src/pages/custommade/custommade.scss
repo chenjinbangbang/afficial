@@ -1,0 +1,22 @@
+.custommade {
+  .custommade-bg {
+    background: url("~@/assets/imgs/custommade_bg.jpg") no-repeat;
+    text-align: center;
+    padding: 70px 0;
+    img {
+      width: 800px;
+    }
+    .custommade-text {
+      color: #fff;
+      font-size: 18px;
+      margin: 40px auto;
+    }
+    .me-btn {
+      width: 220px;
+      margin: auto;
+      .iconfont {
+        font-size: 16px;
+      }
+    }
+  }
+}

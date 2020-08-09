@@ -17,6 +17,11 @@
           <div class="contact-link-note">深圳市宝安区西乡大道与宝田一路交汇处中熙ECO16楼</div>
         </li>
         <li>
+          <div class="circle">
+            <div class="c1"></div>
+            <div class="c2"></div>
+            <div class="c3"></div>
+          </div>
           <img class="contact-link-icon" src="@/assets/imgs/icon_contact2.png" alt />
           <div class="contact-link-title">联系方式</div>
           <div
@@ -24,6 +29,11 @@
           >400-838-5060 | 0755-85000090 | QQ：160939872 | E-mail：admin@wanlang.cn</div>
         </li>
         <li>
+          <div class="circle">
+            <div class="c1"></div>
+            <div class="c2"></div>
+            <div class="c3"></div>
+          </div>
           <img class="contact-link-icon" src="@/assets/imgs/icon_contact3.png" alt />
           <div class="contact-link-title">微信公众号</div>
           <div class="contact-link-code">

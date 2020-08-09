@@ -1,0 +1,306 @@
+.construction {
+  // 字体为黑色的div层
+  .con-1 {
+    background: url("~@/assets/imgs/construction_bg.png") no-repeat;
+    padding: 120px 0;
+    .con-1-home {
+      width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      .con-left {
+        flex: 1;
+        .con-title {
+          font-size: 34px;
+          color: #fff;
+        }
+        .con-classify {
+          color: #ddd;
+          display: flex;
+          margin-top: 20px;
+          font-size: 16px;
+          .con-classify-title {
+          }
+          ul {
+            display: flex;
+            li {
+              padding-right: 10px;
+            }
+          }
+        }
+        .con-note {
+          color: #fff;
+          margin-top: 20px;
+          font-size: 16px;
+          line-height: 28px;
+        }
+        .con-list {
+          margin-top: 60px;
+          ul {
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            color: #fff;
+            li {
+              width: 70px;
+              height: 70px;
+              img {
+                width: 30px;
+              }
+              p {
+                margin-top: 2px;
+              }
+            }
+          }
+        }
+
+        .con-list1 {
+          ul {
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            color: #333;
+            li {
+              background-color: #fff;
+              border-radius: 10px;
+              margin-right: 40px;
+              margin-top: 20px;
+              img {
+                margin-top: 6px;
+              }
+              p {
+              }
+            }
+          }
+        }
+
+        .con-action {
+          margin-top: 80px;
+          font-size: 16px;
+          overflow: hidden;
+          display: flex;
+          background-color: #fff;
+          border-radius: 30px;
+          width: 340px;
+          cursor: pointer;
+          .con-action-btn {
+            flex: 1;
+            padding: 14px 0;
+            text-align: center;
+            &:nth-child(1) {
+              background-color: $theme;
+              color: #fff;
+              border-radius: 30px;
+            }
+            &:nth-child(2) {
+            }
+          }
+        }
+      }
+      .con-right {
+        flex: 1;
+        margin-left: 120px;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  // 字体为白色的div层
+  .con-2 {
+    background: url("~@/assets/imgs/construction_bg1.png") no-repeat;
+    padding: 120px 0;
+    .con-2-home {
+      width: 1200px;
+      margin: 0 auto;
+      display: flex;
+
+      .con-left {
+        flex: 1;
+        .con-title {
+          font-size: 34px;
+          // color: #fff;
+        }
+        .con-classify {
+          color: #999;
+          display: flex;
+          margin-top: 20px;
+          font-size: 16px;
+          .con-classify-title {
+          }
+          ul {
+            display: flex;
+            li {
+              padding-right: 10px;
+            }
+          }
+        }
+        .con-note {
+          // color: #fff;
+          margin-top: 20px;
+          font-size: 16px;
+          line-height: 28px;
+        }
+        .con-list {
+          margin-top: 60px;
+          ul {
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            color: #333;
+            li {
+              width: 70px;
+              height: 70px;
+              img {
+                width: 30px;
+              }
+              p {
+                margin-top: 2px;
+              }
+            }
+          }
+        }
+
+        .con-list1 {
+          ul {
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            color: #333;
+            li {
+              background-color: #fff;
+              border-radius: 10px;
+              margin-right: 40px;
+              margin-top: 20px;
+              img {
+                margin-top: 6px;
+              }
+              p {
+              }
+            }
+          }
+        }
+
+        .con-action {
+          margin-top: 80px;
+          font-size: 16px;
+          overflow: hidden;
+          display: flex;
+          background-color: #fff;
+          border-radius: 30px;
+          width: 340px;
+          cursor: pointer;
+          .con-action-btn {
+            flex: 1;
+            padding: 14px 0;
+            text-align: center;
+            &:nth-child(1) {
+              background-color: $theme;
+              color: #fff;
+              border-radius: 30px;
+            }
+            &:nth-child(2) {
+            }
+          }
+        }
+      }
+      .con-right {
+        flex: 1;
+        margin-right: 120px;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .con-4 {
+    background: url("~@/assets/imgs/construction_bg4.png") no-repeat;
+    .con-right {
+      img {
+        margin-top: 60px;
+      }
+    }
+  }
+
+  .con-5 {
+    .con-right {
+      margin-right: 0;
+      margin-left: 120px;
+    }
+  }
+
+  .con-6 {
+    background: url("~@/assets/imgs/construction_bg6.png") no-repeat;
+    .con-left {
+      margin-top: 120px;
+    }
+    .con-right {
+      margin-left: 0 !important;
+      margin-right: 120px;
+    }
+  }
+
+  .con-data {
+    background: url("~@/assets/imgs/construction_bg6.png") no-repeat;
+    padding: 70px 0;
+    .con-data-home {
+      width: 1200px;
+      margin: 0 auto;
+      ul {
+        display: flex;
+        li {
+          display: flex;
+          flex: 1;
+          img {
+            width: 66px;
+            height: 66px;
+          }
+          .con-li-right {
+            margin-left: 15px;
+            flex: 1;
+            .con-li-right-title {
+              color: $theme;
+              font-size: 30px;
+            }
+            .con-li-right-note {
+              font-size: 18px;
+              margin-top: 6px;
+              color: #eee;
+            }
+          }
+        }
+      }
+      .con-data-btn {
+        margin: 40px auto 0 auto;
+        background-color: #fff;
+        border-radius: 80px;
+        padding: 20px 40px;
+        display: flex;
+        width: 640px;
+
+        .con-data-btn-left {
+          flex: 1;
+          img {
+            width: 450px;
+          }
+          p {
+            margin-top: 10px;
+            color: #666;
+            font-size: 16px;
+          }
+        }
+        .con-data-btn-right {
+          width: 90px;
+          height: 90px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          background-color: $theme;
+          font-size: 16px;
+          color: #fff;
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+}

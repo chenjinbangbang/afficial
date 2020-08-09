@@ -29,6 +29,7 @@
         flex-direction: column;
         .header-contact {
           margin-top: 10px;
+          margin-left: auto;
           span {
             &:nth-child(1) {
               color: #a1a6ab;
@@ -40,26 +41,68 @@
         }
         .nav {
           margin-top: auto;
-          ul {
+          > ul {
             display: flex;
             font-size: 16px;
-            li {
+            > li {
               margin: 0 10px;
               &:hover {
-                a {
+                > a {
                   color: $theme;
                 }
               }
               &.active {
-                a {
+                > a {
                   color: $theme;
                   border-bottom: 3px solid $theme;
                 }
               }
-              a {
+              > a {
                 display: inline-block;
                 padding: 15px 20px;
                 color: #333;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .custommade-classify {
+      width: 100%;
+      height: 100px;
+      left: 0;
+      overflow: hidden;
+      position: absolute;
+      background-color: #fff;
+      ul {
+        width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        li {
+          // flex: 1;
+          width: 20%;
+          a {
+            padding-top: 20px;
+            display: block;
+            width: 100%;
+            height: 100px;
+            display: flex;
+            // border: 1px solid #f00;
+            img {
+              width: 50px;
+              height: 50px;
+            }
+            .classify-right {
+              margin-left: 15px;
+              .classify-title {
+                font-size: 16px;
+                color: #333;
+              }
+              .classify-note {
+                color: #999;
+                margin-top: 8px;
+                font-size: 12px;
               }
             }
           }
@@ -131,5 +174,37 @@
     text-align: center;
     background-color: #373c40;
     color: #999;
+  }
+
+  .contact-way {
+    position: fixed;
+    bottom: 100px;
+    right: 40px;
+  }
+
+  .contact-way,
+  .el-backtop {
+    width: auto;
+    height: auto;
+    background: none;
+    ul {
+      li {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        background-color: $theme;
+        border-radius: 4px;
+        margin-top: 10px;
+        .iconfont {
+          color: #fff;
+          font-size: 30px;
+        }
+        .el-icon-arrow-up {
+          color: #fff;
+          font-size: 30px;
+        }
+      }
+    }
   }
 }

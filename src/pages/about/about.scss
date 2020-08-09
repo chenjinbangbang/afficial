@@ -1,0 +1,58 @@
+.about {
+  .about-bg {
+    img {
+      width: 100%;
+    }
+  }
+
+  .company {
+    text-align: center;
+    width: 1200px;
+    margin: 50px auto;
+    .company-title {
+      font-size: 36px;
+    }
+    .company-note {
+      margin-top: 50px;
+      span {
+        color: #999;
+      }
+    }
+  }
+
+  .culture {
+    text-align: center;
+    width: 1200px;
+    margin: 50px auto;
+
+    .culture-title {
+      font-size: 36px;
+    }
+    ul {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+      color: #fff;
+      li {
+        width: 280px;
+        background-color: #aaa;
+        padding: 30px 0;
+        cursor: pointer;
+        &:hover {
+          background-color: $theme;
+        }
+        img {
+          // margin-top: 20px;
+        }
+        p {
+          margin-top: 8px;
+          &:nth-child(2) {
+            font-size: 18px;
+          }
+          &:nth-child(3) {
+          }
+        }
+      }
+    }
+  }
+}

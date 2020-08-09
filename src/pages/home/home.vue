@@ -6,7 +6,7 @@
       </el-carousel-item>
     </el-carousel>
 
-    <div class="home-data">
+    <div class="home-data" ref="home-data">
       <ul>
         <li>
           <span class="iconfont icon-diannao"></span>
@@ -39,7 +39,7 @@
       </ul>
     </div>
 
-    <div class="service">
+    <div class="service wow slideInUp" ref="service">
       <div class="service-title">产品服务</div>
       <div class="service-note">根据客户的个性化需求及行业特点，提供专业的策划方案，量身定制开发</div>
       <div class="service-data">
@@ -88,7 +88,7 @@
       </div>
     </div>
 
-    <div class="scene">
+    <div class="scene wow slideInUp" ref="scene">
       <div class="scene-title">应用场景</div>
       <div class="scene-note">万狼科技为企业提供产业互联网生态体系深度定制开发服务</div>
       <div class="scene-way">
@@ -134,12 +134,12 @@
       </div>
     </div>
 
-    <div class="brand">
+    <div class="brand wow slideInUp" ref="brand">
       <div class="brand-title">实力品牌</div>
       <div class="brand-note">专注互联网高端定制开发服务，以独到的创意、专业的眼光、高水平的技术助您提升企业实力</div>
       <div class="brand-list">
         <ul>
-          <li>
+          <li class="wow slideInLeft">
             <img class="brand-bg" src="@/assets/imgs/brand_bg1.jpg" alt />
             <div class="brand-content">
               <div class="brand-content-title">50人技术团队</div>
@@ -147,7 +147,7 @@
               <div class="brand-content-main">万狼科技设计师、开发工程师必须有3年以上从业经验，每年负责各类大小项目超过30+</div>
             </div>
           </li>
-          <li>
+          <li class="wow slideInLeft" data-wow-duration="2s">
             <img class="brand-bg" src="@/assets/imgs/brand_bg2.jpg" alt />
             <div class="brand-content">
               <div class="brand-content-title">高效的开发流程</div>
@@ -163,7 +163,7 @@
               <div class="brand-content-main">专业的软件测试人员对产品得各个方面进行反复的测试，确保每个产品具备高强度的稳定性与安全性，再交付到客户手上</div>
             </div>
           </li>
-          <li>
+          <li class="wow slideInRight" data-wow-duration="2s">
             <img class="brand-bg" src="@/assets/imgs/brand_bg4.jpg" alt />
             <div class="brand-content">
               <div class="brand-content-title">5000个客户的选择</div>
@@ -171,7 +171,7 @@
               <div class="brand-content-main">10年间，万狼科技已服务超过5000个客户，8000多个成功案例，我们注重的不仅仅是数量，更注重质量</div>
             </div>
           </li>
-          <li>
+          <li class="wow slideInRight">
             <img class="brand-bg" src="@/assets/imgs/brand_bg5.jpg" alt />
             <div class="brand-content">
               <div class="brand-content-title">科学高效的售后服务</div>
@@ -183,7 +183,7 @@
       </div>
     </div>
 
-    <div class="process">
+    <div class="process wow slideInUp" ref="process">
       <div class="process-title">开发流程</div>
       <div class="process-note">标准化操作流程，系统化开发，人性化服务，最大化提高效率</div>
       <div class="process-list">
@@ -261,14 +261,11 @@
         </div>
       </div>
     </div>
-
-    <el-backtop>
-      <i class="el-icon-arrow-up"></i>
-    </el-backtop>
   </div>
 </template>
 
 <script>
+import { WOW } from "wowjs";
 export default {
   name: "Home",
   data() {
@@ -282,6 +279,33 @@ export default {
     };
   },
   created() {},
+  mounted() {
+    // let homeData = this.$refs["home-data"];
+    // let service = this.$refs["service"];
+    // let scene = this.$refs["scene"];
+    // let brand = this.$refs["brand"];
+    // let process = this.$refs["process"];
+    // window.onscroll = function () {
+    //   // 检测鼠标滚轮距离顶部的位置
+    //   let top = document.documentElement.scrollTop || document.body.scrollTop;
+    //   console.log(top);
+    //   let animation = "slideTop .3s linear";
+    //   if (top > 50) {
+    //     service.style.animation = animation;
+    //   }
+    //   if (top > 500) {
+    //     scene.style.animation = animation;
+    //   }
+    //   if (top > 1400) {
+    //     brand.style.animation = animation;
+    //   }
+    //   if (top > 2000) {
+    //     process.style.animation = animation;
+    //   }
+    // };
+    console.log(new WOW());
+    new WOW().init();
+  },
 };
 </script>
 

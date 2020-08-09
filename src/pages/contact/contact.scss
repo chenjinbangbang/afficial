@@ -1,3 +1,15 @@
+// 波纹
+@keyframes ripple {
+  from {
+    transform: scale(1, 1);
+    opacity: 0.6;
+  }
+  to {
+    transform: scale(130, 130);
+    opacity: 0;
+  }
+}
+
 .contact {
   .contact-bg {
     img {
@@ -7,41 +19,34 @@
 
   .contact-link {
     width: 1200px;
-    margin: 100px auto;
+    margin: 50px auto;
     ul {
       display: flex;
       text-align: center;
       justify-content: space-around;
       li {
-        width: 280px;
+        width: 320px;
+        height: 320px;
         // padding: 0 20px;
         // margin: 0 40px;
         position: relative;
-
-        @keyframes flash {
-          from {
-            transform: scale(1, 1);
-            opacity: 0.6;
-          }
-          to {
-            transform: scale(300, 300);
-            opacity: 0;
-          }
-        }
+        // border: 1px solid #f00;
+        padding: 50px 20px;
+        border-radius: 8px;
+        // transition: all 0.5s;
+        // border: 1px solid #f00;
 
         &:hover {
+          background-color: rgba(60, 60, 60, 0.1);
           .circle {
             .c1 {
-              // transform: scale(300, 300);
-              // opacity: 0;
-              // transition: all 3s;
-              animation: flash 3s ease 0 infinite;
+              animation: ripple 3s ease infinite;
             }
             .c2 {
-              animation: flash 3s ease 1s infinite;
+              animation: ripple 3s ease 1s infinite;
             }
             .c3 {
-              animation: flash 3s ease 2s infinite;
+              animation: ripple 3s ease 2s infinite;
             }
           }
         }
@@ -50,6 +55,8 @@
           position: absolute;
           width: 100%;
           height: 100%;
+          top: 0;
+          left: 0;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -58,8 +65,7 @@
             border-radius: 50%;
             width: 1px;
             height: 1px;
-            background-color: #666;
-            // opacity: 0.5;
+            border: 1px solid #666;
           }
           .c1 {
           }

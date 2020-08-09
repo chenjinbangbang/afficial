@@ -95,9 +95,45 @@ a:visited {
   transition: all 0.5s;
 }
 
+// 手风琴显示
+@keyframes accord {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100px;
+  }
+}
+.accord-enter,
+.accord-leave-to {
+  // height: 0;
+}
+.accord-enter-active {
+  animation: accord 0.3s linear;
+}
+.accord-leave-active {
+  // transition: all 0.5s;
+  animation: accord 0.3s reverse;
+}
+
 [v-cloak] {
   display: none;
 }
+
+// keyframs动画
+// @keyframes slideTop {
+//   0% {
+//     transform: translateY(100px);
+//     opacity: 0;
+//   }
+//   100% {
+//     transform: translateY(0);
+//     opacity: 1;
+//   }
+// }
+// .slideTop {
+//   animation: slideTop 1s;
+// }
 
 // 动画按钮
 .me-btn {

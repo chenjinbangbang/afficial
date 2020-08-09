@@ -8,9 +8,14 @@ import config from './utils/config'
 import './assets/fonts/iconfont.css'
 import './assets/css/base.scss'
 
+// wowjs
+import './assets/css/animate.min.css'
+
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 Vue.use(ElementUI)
+
+
 
 Vue.config.productionTip = false
 Vue.use(config)
