@@ -156,6 +156,17 @@
             <i class="iconfont icon-QQ"></i>
           </a>
         </li>
+        <el-tooltip effect="light" placement="left">
+          <div slot="content">
+            <div class="arcode">
+              <img src="@/assets/imgs/qrcode.png" alt />
+              <p>万狼科技公众号</p>
+            </div>
+          </div>
+          <li>
+            <i class="iconfont icon-erweima"></i>
+          </li>
+        </el-tooltip>
       </ul>
     </div>
 
