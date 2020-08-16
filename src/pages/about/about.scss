@@ -7,13 +7,13 @@
 
   .company {
     text-align: center;
-    width: 1200px;
-    margin: 50px auto;
+    width: 12remx;
+    margin: 0.5rem auto;
     .company-title {
-      font-size: 36px;
+      font-size: 0.36rem;
     }
     .company-note {
-      margin-top: 50px;
+      margin-top: 0.5rem;
       span {
         color: #999;
       }
@@ -22,21 +22,21 @@
 
   .culture {
     text-align: center;
-    width: 1200px;
-    margin: 50px auto;
+    width: 12rem;
+    margin: 0.5rem auto;
 
     .culture-title {
-      font-size: 36px;
+      font-size: 0.36rem;
     }
     ul {
       display: flex;
       justify-content: space-between;
-      margin-top: 40px;
+      margin-top: 0.4rem;
       color: #fff;
       li {
-        width: 280px;
+        width: 2.8rem;
         background-color: #aaa;
-        padding: 30px 0;
+        padding: 0.3rem 0;
         cursor: pointer;
         &:hover {
           background-color: $theme;
@@ -45,9 +45,9 @@
           // margin-top: 20px;
         }
         p {
-          margin-top: 8px;
+          margin-top: 0.08rem;
           &:nth-child(2) {
-            font-size: 18px;
+            font-size: 0.18rem;
           }
           &:nth-child(3) {
           }

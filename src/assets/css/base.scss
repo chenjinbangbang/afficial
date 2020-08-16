@@ -1,11 +1,15 @@
+html {
+  font-size: 100px;
+}
 body,
 html {
   height: 100%;
 }
 body {
+  width: 100%;
   background-color: #fff;
   color: #666;
-  font-size: 14px;
+  font-size: 0.14rem;
   color: #333;
 }
 * {
@@ -109,11 +113,11 @@ a:visited {
   // height: 0;
 }
 .accord-enter-active {
-  animation: accord 0.3s linear;
+  animation: accord 0.2s linear;
 }
 .accord-leave-active {
   // transition: all 0.5s;
-  animation: accord 0.3s reverse;
+  animation: accord 0.2s reverse;
 }
 
 [v-cloak] {

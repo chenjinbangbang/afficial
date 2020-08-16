@@ -1,6 +1,9 @@
 <template>
   <div class="app">
     <header class="header">
+      <!-- <div class="h1">1454545</div>
+      <div class="h2">1454545</div>-->
+
       <div class="header-home">
         <div class="header-left">
           <img src="@/assets/imgs/logo.png" alt />
@@ -20,7 +23,7 @@
                 @mouseenter="mouseenter"
                 @mouseleave="mouseleave"
               >
-                <router-link to="/construction">高端定制</router-link>
+                <a>高端定制</a>
 
                 <transition name="accord">
                   <div class="custommade-classify" v-show="custommadeShow">
@@ -86,6 +89,53 @@
             </ul>
           </div>
         </div>
+
+        <div class="header-right1">
+          <div class="header-contact">
+            <span>全部免费咨询热线：</span>
+            <span>400-838-5060</span>
+          </div>
+          <i class="iconfont icon-caidan" @click="navShow = !navShow"></i>
+
+          <div class="nav" v-if="navShow">
+            <div class="nav-bg" @click="navShow = false"></div>
+            <ul>
+              <li :class="{active: $route.path === '/'}">
+                <div class="nav-child" @click="goTo('/')">首页</div>
+              </li>
+              <li :class="{active1: custommadeRouter.includes($route.path)}">
+                <div class="nav-child" @click="custommadeShow = !custommadeShow">
+                  <span>高端定制</span>
+                  <i
+                    :class="{'el-icon-caret-bottom': !custommadeShow, 'el-icon-caret-top': custommadeShow}"
+                  ></i>
+                </div>
+
+                <transition name="accord">
+                  <div class="custommade-classify" v-show="custommadeShow">
+                    <ul>
+                      <li :class="{active: $route.path === '/construction'}">
+                        <div class="nav-child" @click="goTo('/construction')">网站定制</div>
+                      </li>
+                      <li :class="{active: $route.path === '/applet'}">
+                        <div class="nav-child" @click="goTo('/applet')">小程序开发</div>
+                      </li>
+                    </ul>
+                  </div>
+                </transition>
+              </li>
+              <li :class="{active: $route.path === '/case'}">
+                <div class="nav-child" @click="goTo('/case')">成功案例</div>
+              </li>
+              <li :class="{active: $route.path === '/about'}">
+                <div class="nav-child" @click="goTo('/about')">关于我们</div>
+              </li>
+              <li :class="{active: $route.path === '/contact'}">
+                <div class="nav-child" @click="goTo('/contact')">联系我们</div>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -93,7 +143,7 @@
       <router-view />
     </div>
 
-    <div class="footer-contact">
+    <!-- <div class="footer-contact">
       <div class="contact-home">
         <div class="contact-left">
           <div class="contact-icon">
@@ -145,7 +195,7 @@
           </ul>
         </div>
       </div>
-    </div>
+    </div>-->
 
     <footer class="footer">Coypright @ 万狼科技 -深圳网站建设 粤ICP备15011227号-1 版权所有</footer>
 
@@ -189,12 +239,20 @@ export default {
   name: "App",
   data() {
     return {
+      navShow: false, // 导航的显示与隐藏
+
       custommadeShow: false, // 高端定制类型弹框的显示与隐藏
       custommadeRouter: ["/construction", "/applet"], // 高端定制的路由
     };
   },
   created() {},
   methods: {
+    // 跳转nav路由
+    goTo(path) {
+      this.$router.push({ path });
+      this.navShow = false;
+    },
+
     mouseenter() {
       this.custommadeShow = true;
       // console.log("mouseenter");

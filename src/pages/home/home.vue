@@ -1,8 +1,8 @@
 <template>
   <div class="home">
-    <el-carousel :interval="4000" height="630px">
+    <el-carousel :interval="4000">
       <el-carousel-item v-for="(item, index) in lists" :key="index">
-        <img :src="item" alt />
+        <img :src="isWidth640 ? item.imgUrl : item.imgUrlBig" alt />
       </el-carousel-item>
     </el-carousel>
 
@@ -93,21 +93,21 @@
       <div class="scene-note">万狼科技为企业提供产业互联网生态体系深度定制开发服务</div>
       <div class="scene-way">
         <ul>
-          <li class="active">
+          <li :class="{active: sceneIndex === 0}" @click="sceneIndex = 0">
             <img src="@/assets/imgs/home_icon5.png" alt />
             <div class="scene-way-right">
               高效的定制
               <br />开发体系
             </div>
           </li>
-          <li>
+          <li :class="{active: sceneIndex === 1}" @click="sceneIndex = 1">
             <img src="@/assets/imgs/home_icon6.png" alt />
             <div class="scene-way-right">
               丰富的场景
               <br />应用模式
             </div>
           </li>
-          <li>
+          <li :class="{active: sceneIndex === 2}" @click="sceneIndex = 2">
             <img src="@/assets/imgs/home_icon7.png" alt />
             <div class="scene-way-right">
               全渠道互联网
@@ -117,20 +117,55 @@
         </ul>
       </div>
 
-      <div class="scene-content">
-        <div class="scene-content-left">
-          <img src="@/assets/imgs/home_computer.png" alt />
-        </div>
-        <div class="scene-content-right">
-          <div class="scene-content-title">高效的定制开发体系</div>
-          <div
-            class="scene-content-note"
-          >基于万狼科技独立研发的网站开发 后台、WFSHOP、WLSHOP、 WLCMS系统，服务化的业务系统、组件化拼装体系、集群开发模式</div>
-          <div class="me-btn">
-            <span class="me-btn-text">我要咨询</span>
-            <span class="iconfont icon-chat-linear"></span>
-          </div>
-        </div>
+      <div class="scene-content" :style="{ 'height': `${sceneHeight}px` }">
+        <ul
+          ref="scene-content-ul"
+          :style="{'transform': `translateY(-${($refs['scene-content-ul'] ? $refs['scene-content-ul'].clientHeight : 0) / 3 * sceneIndex}px)` }"
+        >
+          <li>
+            <div class="scene-content-left">
+              <img src="@/assets/imgs/scene_img1.png" alt />
+            </div>
+            <div class="scene-content-right">
+              <div class="scene-content-title">高效的定制开发体系</div>
+              <div
+                class="scene-content-note"
+              >基于万狼科技独立研发的网站开发 后台、WFSHOP、WLSHOP、 WLCMS系统，服务化的业务系统、组件化拼装体系、集群开发模式</div>
+              <div class="me-btn">
+                <span class="me-btn-text">我要咨询</span>
+                <span class="iconfont icon-chat-linear"></span>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="scene-content-left">
+              <img src="@/assets/imgs/scene_img2.png" alt />
+            </div>
+            <div class="scene-content-right">
+              <div class="scene-content-title">丰富的场景应用模式</div>
+              <div
+                class="scene-content-note"
+              >万狼科技包含的应用模式：B2B、B2C、C2C、B2B2C、O2O、ERP、OA、CRM、HR、微商城、互联网金融、小程序等</div>
+              <div class="me-btn">
+                <span class="me-btn-text">我要咨询</span>
+                <span class="iconfont icon-chat-linear"></span>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="scene-content-left">
+              <img src="@/assets/imgs/scene_img3.png" alt />
+            </div>
+            <div class="scene-content-right">
+              <div class="scene-content-title">全渠道互联网开发服务</div>
+              <div class="scene-content-note">开发终端包括：PC端、手机端、微信端、移动APP、物联网等全网覆盖</div>
+              <div class="me-btn">
+                <span class="me-btn-text">我要咨询</span>
+                <span class="iconfont icon-chat-linear"></span>
+              </div>
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
 
@@ -270,11 +305,27 @@ export default {
   name: "Home",
   data() {
     return {
+      isWidth640: false, // 屏幕宽度是否小于640px
+      sceneIndex: 0, // 应用场景tab标签索引
+      sceneHeight: 0, // 应用场景的高度
+
       lists: [
-        require("@/assets/imgs/banner1.png"),
-        require("@/assets/imgs/banner2.png"),
-        require("@/assets/imgs/banner3.png"),
-        require("@/assets/imgs/banner4.png"),
+        {
+          imgUrl: require("@/assets/imgs/banner1.jpg"),
+          imgUrlBig: require("@/assets/imgs/banner1_big.png"),
+        },
+        {
+          imgUrl: require("@/assets/imgs/banner2.jpg"),
+          imgUrlBig: require("@/assets/imgs/banner2_big.png"),
+        },
+        {
+          imgUrl: require("@/assets/imgs/banner3.jpg"),
+          imgUrlBig: require("@/assets/imgs/banner3_big.png"),
+        },
+        {
+          imgUrl: require("@/assets/imgs/banner4.jpg"),
+          imgUrlBig: require("@/assets/imgs/banner4_big.png"),
+        },
       ],
     };
   },
@@ -305,6 +356,19 @@ export default {
     // };
     console.log(new WOW());
     new WOW().init();
+
+    this.sceneHeight = this.$refs["scene-content-ul"].clientHeight / 3; // 应用场景的高度
+    window.onresize = () => {
+      // console.log(document.body.clientWidth);
+      if (document.body.clientWidth <= 640) {
+        this.isWidth640 = true;
+      } else {
+        this.isWidth640 = false;
+      }
+
+      this.sceneHeight = this.$refs["scene-content-ul"].clientHeight / 3; // 应用场景的高度
+      // console.log(this.sceneHeight);
+    };
   },
 };
 </script>
