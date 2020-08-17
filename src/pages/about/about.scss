@@ -7,13 +7,13 @@
 
   .company {
     text-align: center;
-    width: 12remx;
+    max-width: 12rem;
     margin: 0.5rem auto;
     .company-title {
       font-size: 0.36rem;
     }
     .company-note {
-      margin-top: 0.5rem;
+      margin: 0.5rem 0.1rem;
       span {
         color: #999;
       }
@@ -22,7 +22,7 @@
 
   .culture {
     text-align: center;
-    width: 12rem;
+    max-width: 12rem;
     margin: 0.5rem auto;
 
     .culture-title {
@@ -30,19 +30,20 @@
     }
     ul {
       display: flex;
-      justify-content: space-between;
+      flex-wrap: wrap;
       margin-top: 0.4rem;
       color: #fff;
       li {
-        width: 2.8rem;
+        width: 23%;
         background-color: #aaa;
         padding: 0.3rem 0;
+        margin: 0 0.05rem;
         cursor: pointer;
         &:hover {
           background-color: $theme;
         }
         img {
-          // margin-top: 20px;
+          width: 0.4rem;
         }
         p {
           margin-top: 0.08rem;
@@ -50,6 +51,181 @@
             font-size: 0.18rem;
           }
           &:nth-child(3) {
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .about {
+    .company {
+      margin: 0.5rem auto;
+      .company-title {
+        font-size: 0.3rem;
+      }
+      .company-note {
+        margin: 0.4rem 0.2rem;
+        span {
+        }
+      }
+    }
+
+    .culture {
+      margin: 0.5rem auto;
+      .culture-title {
+        font-size: 0.3rem;
+      }
+      ul {
+        margin-top: 0.3rem;
+        li {
+          width: 23%;
+          padding: 0.3rem 0;
+          margin: 0 0.05rem;
+          img {
+          }
+          p {
+            margin-top: 0.08rem;
+            &:nth-child(2) {
+              font-size: 0.16rem;
+            }
+            &:nth-child(3) {
+              font-size: 0.12rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about {
+    .company {
+      margin: 0.5rem auto;
+      .company-title {
+        font-size: 0.26rem;
+      }
+      .company-note {
+        margin: 0.3rem 0.2rem;
+        font-size: 0.12rem;
+        span {
+        }
+      }
+    }
+
+    .culture {
+      margin: 0.5rem auto;
+      .culture-title {
+        font-size: 0.3rem;
+      }
+      ul {
+        margin-top: 0.3rem;
+        li {
+          width: 23%;
+          padding: 0.2rem 0;
+          margin: 0 0.05rem;
+          img {
+          }
+          p {
+            margin: 0.08rem 0.05rem 0 0.08rem;
+            &:nth-child(2) {
+              font-size: 0.16rem;
+            }
+            &:nth-child(3) {
+              font-size: 0.12rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .about {
+    .company {
+      margin: 0.5rem auto;
+      .company-title {
+        font-size: 0.26rem;
+      }
+      .company-note {
+        margin: 0.3rem 0.2rem;
+        font-size: 0.12rem;
+        span {
+        }
+      }
+    }
+
+    .culture {
+      margin: 0.5rem auto;
+      .culture-title {
+        font-size: 0.3rem;
+      }
+      ul {
+        margin-top: 0.3rem;
+        li {
+          width: 48%;
+          padding: 0.3rem 0;
+          margin: 0 0.05rem;
+          &:nth-child(n + 3) {
+            margin-top: 0.1rem;
+          }
+          img {
+          }
+          p {
+            margin: 0.08rem 0.05rem 0 0.08rem;
+            &:nth-child(2) {
+              font-size: 0.16rem;
+            }
+            &:nth-child(3) {
+              font-size: 0.12rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .about {
+    .company {
+      margin: 0.5rem auto;
+      .company-title {
+        font-size: 0.26rem;
+      }
+      .company-note {
+        margin: 0.3rem 0.2rem;
+        font-size: 0.12rem;
+        span {
+        }
+      }
+    }
+
+    .culture {
+      margin: 0.5rem auto;
+      .culture-title {
+        font-size: 0.3rem;
+      }
+      ul {
+        margin-top: 0.3rem;
+        li {
+          width: 100%;
+          padding: 0.3rem 0;
+          margin: 0 0.05rem;
+          margin-top: 0.1rem;
+          img {
+          }
+          p {
+            margin: 0.08rem 0.05rem 0 0.08rem;
+            &:nth-child(2) {
+              font-size: 0.16rem;
+            }
+            &:nth-child(3) {
+              font-size: 0.12rem;
+            }
           }
         }
       }

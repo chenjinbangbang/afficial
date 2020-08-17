@@ -7,29 +7,33 @@
     <div class="filter">
       <div class="filter-item">
         <div class="filter-title">所属案例</div>
-        <div class="filter-all" :class="{active: belongType === ''}" @click="belongType = ''">全部</div>
-        <ul>
-          <li :class="{active: belongType === 1}" @click="belongType = 1">PC网站</li>
-          <li :class="{active: belongType === 2}" @click="belongType = 2">手机网站</li>
-          <li :class="{active: belongType === 3}" @click="belongType = 3">小程序开发</li>
-          <li :class="{active: belongType === 4}" @click="belongType = 4">公众号开发</li>
-          <li :class="{active: belongType === 5}" @click="belongType = 5">APP开发</li>
-        </ul>
+        <div class="filter-content">
+          <div class="filter-all" :class="{active: belongType === ''}" @click="belongType = ''">全部</div>
+          <ul>
+            <li :class="{active: belongType === 1}" @click="belongType = 1">PC网站</li>
+            <li :class="{active: belongType === 2}" @click="belongType = 2">手机网站</li>
+            <li :class="{active: belongType === 3}" @click="belongType = 3">小程序开发</li>
+            <li :class="{active: belongType === 4}" @click="belongType = 4">公众号开发</li>
+            <li :class="{active: belongType === 5}" @click="belongType = 5">APP开发</li>
+          </ul>
+        </div>
       </div>
       <div class="filter-item">
         <div class="filter-title">开发类型</div>
-        <div class="filter-all" :class="{active: devType === ''}" @click="devType = ''">全部</div>
-        <ul>
-          <li :class="{active: devType === 1}" @click="devType = 1">企业官网</li>
-          <li :class="{active: devType === 2}" @click="devType = 2">营销型网站</li>
-          <li :class="{active: devType === 3}" @click="devType = 3">集团官网</li>
-          <li :class="{active: devType === 4}" @click="devType = 4">购物商场</li>
-          <li :class="{active: devType === 5}" @click="devType = 5">响应式，H5网站</li>
-          <li :class="{active: devType === 6}" @click="devType = 6">外贸，多语言</li>
-          <li :class="{active: devType === 7}" @click="devType = 7">门户论坛</li>
-          <li :class="{active: devType === 8}" @click="devType = 8">平台开发</li>
-          <li :class="{active: devType === 9}" @click="devType = 9">管理系统开发</li>
-        </ul>
+        <div class="filter-content">
+          <div class="filter-all" :class="{active: devType === ''}" @click="devType = ''">全部</div>
+          <ul>
+            <li :class="{active: devType === 1}" @click="devType = 1">企业官网</li>
+            <li :class="{active: devType === 2}" @click="devType = 2">营销型网站</li>
+            <li :class="{active: devType === 3}" @click="devType = 3">集团官网</li>
+            <li :class="{active: devType === 4}" @click="devType = 4">购物商场</li>
+            <li :class="{active: devType === 5}" @click="devType = 5">响应式，H5网站</li>
+            <li :class="{active: devType === 6}" @click="devType = 6">外贸，多语言</li>
+            <li :class="{active: devType === 7}" @click="devType = 7">门户论坛</li>
+            <li :class="{active: devType === 8}" @click="devType = 8">平台开发</li>
+            <li :class="{active: devType === 9}" @click="devType = 9">管理系统开发</li>
+          </ul>
+        </div>
       </div>
     </div>
 
@@ -37,7 +41,9 @@
       <ul>
         <li v-for="(item,index) in lists" :key="index">
           <img :src="item.imgUrl" alt />
-          <p>{{item.title}}</p>
+          <p>
+            <span>{{item.title}}</span>
+          </p>
         </li>
       </ul>
 
