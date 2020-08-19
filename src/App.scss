@@ -249,49 +249,50 @@
   .footer-contact {
     background-color: #373c40;
     color: #fff;
-    padding: 50px 0;
+    padding: .5rem 0;
     .contact-home {
-      width: 1200px;
+      max-width: 12rem;
       margin: 0 auto;
       display: flex;
+      flex-wrap: wrap;
       .contact-left {
         display: flex;
         .contact-icon {
           img {
-            width: 60px;
+            width: .6rem;
           }
         }
         .contact-info {
-          margin-left: 20px;
+          margin-left: .2rem;
           p {
             font-weight: bold;
             &:nth-child(1) {
             }
             &:nth-child(2) {
-              font-size: 18px;
+              font-size: .18rem;
             }
           }
           .me-base-btn {
-            margin-top: 20px;
+            margin-top: .2rem;
             color: #fff;
           }
         }
       }
       .contact-right {
         flex: 1;
-        margin-left: 40px;
-        padding-left: 40px;
+        margin-left: .4rem;
+        padding-left: .4rem;
         border-left: 1px solid #555;
         ul {
           display: flex;
           li {
             flex: 1;
             .contact-right-title {
-              font-size: 16px;
+              font-size: .16rem;
             }
             p {
               color: #999;
-              margin-top: 15px;
+              margin-top: .15rem;
             }
           }
         }
@@ -301,16 +302,20 @@
 
   .footer {
     border-top: 1px solid #555;
-    padding: 40px 0;
+    padding: .4rem .2rem;
     text-align: center;
     background-color: #373c40;
     color: #999;
+    
+    @media screen and (max-width: 550px) {
+      padding: .2rem 0;
+    }
   }
 
   .contact-way {
     position: fixed;
-    bottom: 100px;
-    right: 40px;
+    bottom: 1rem;
+    right: .4rem;
   }
 
   .contact-way,
@@ -320,20 +325,20 @@
     background: none;
     ul {
       li {
-        width: 50px;
-        height: 50px;
-        line-height: 50px;
+        width: .5rem;
+        height: .5rem;
+        line-height: .5rem;
         text-align: center;
         background-color: $theme;
-        border-radius: 4px;
-        margin-top: 10px;
+        border-radius: .04rem;
+        margin-top: .1rem;
         .iconfont {
           color: #fff;
-          font-size: 30px;
+          font-size: .3rem;
         }
         .el-icon-arrow-up {
           color: #fff;
-          font-size: 30px;
+          font-size: .3rem;
         }
       }
     }

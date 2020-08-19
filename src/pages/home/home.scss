@@ -692,31 +692,34 @@
   }
 
   .process {
-    width: 1200px;
-    margin: 40px auto 60px auto;
+    max-width: 12rem;
+    margin: .4rem auto .6rem auto;
     text-align: center;
     .process-title {
-      font-size: 34px;
+      font-size: .34rem;
     }
     .process-note {
       color: #999;
-      margin-top: 20px;
+      margin-top: .2rem;
+      padding: 0 0.2rem;
     }
     .process-list {
-      margin-top: 40px;
+      margin-top: .4rem;
+      padding: 0 .2rem;
       ul {
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         li {
           text-align: center;
-          flex: 1;
-
+          width: 20%;
           &:hover {
             .process-content {
               .process-content-title {
                 .icon-jiantou2 {
                   &.icon1 {
                     opacity: 0;
-                    transform: translateX(-50px);
+                    transform: translateX(-.5rem);
                   }
                   &.icon2 {
                     opacity: 1;
@@ -729,24 +732,24 @@
 
           .process-img {
             transition: all 0.3s;
-            width: 50px;
+            width: .5rem;
           }
           .process-content {
             .process-content-title {
               position: relative;
-              margin-top: 20px;
+              margin-top: .2rem;
               display: flex;
               align-items: center;
               justify-content: center;
               .process-text {
                 color: #666;
-                font-size: 16px;
+                font-size: .16rem;
               }
               .icon-jiantou2 {
                 position: absolute;
-                margin-top: 4px;
-                right: -20px;
-                font-size: 40px;
+                margin-top: .04rem;
+                right: -.2rem;
+                font-size: .4rem;
                 transition: all 0.3s;
                 &.icon1 {
                   opacity: 1;
@@ -756,14 +759,14 @@
                 &.icon2 {
                   opacity: 0;
                   color: $theme;
-                  transform: translateX(-50px);
+                  transform: translateX(-.5rem);
                 }
               }
             }
             .process-content-main {
-              margin-top: 20px;
+              margin-top: .2rem;
               color: #999;
-              padding: 0 20px;
+              padding: 0 .2rem;
             }
           }
         }
@@ -771,13 +774,51 @@
     }
 
     .process-btn {
-      margin-top: 50px;
+      margin-top: .5rem;
       .me-btn {
         margin: auto;
         .iconfont {
-          margin-top: 2px;
-          font-size: 20px;
-          margin-left: 10px;
+          margin-top: .02rem;
+          font-size: .2rem;
+          margin-left: .1rem;
+        }
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .process-title {
+        font-size: .3rem;
+      }
+      .process-note {
+        font-size: 0.12rem;
+      }
+      .process-list {
+        ul {
+          li {
+            width: 33.3%;
+            &:nth-child(n + 4) {
+              margin-top: .2rem;
+            }
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 550px) {
+      .process-title {
+        font-size: .26rem;
+      }
+      .process-note {
+        font-size: 0.12rem;
+      }
+      .process-list {
+        ul {
+          li {
+            width: 50%;
+            &:nth-child(n + 3) {
+              margin-top: .2rem;
+            }
+          }
         }
       }
     }
@@ -788,19 +829,48 @@
     background-size: cover;
     color: #fff;
     text-align: center;
-    padding: 30px 0 20px 0;
+    padding: .3rem 0 .2rem 0;
     .plan-title {
-      font-size: 36px;
+      font-size: .36rem;
     }
     .plan-note {
-      margin-top: 10px;
-      font-size: 20px;
+      margin-top: .1rem;
+      font-size: .2rem;
     }
     .plan-btn {
-      margin-top: 20px;
+      margin-top: .2rem;
       .me-btn {
         margin: 0 auto;
       }
     }
+
+    @media screen and (max-width: 992px) {
+      .plan-title {
+        font-size: .3rem;
+      }
+      .plan-note {
+        font-size: .18rem;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .plan-title {
+        font-size: .24rem;
+      }
+      .plan-note {
+        font-size: .16rem;
+      }
+    }
+
+    @media screen and (max-width: 550px) {
+      .plan-title {
+        font-size: .18rem;
+      }
+      .plan-note {
+        font-size: .12rem;
+      }
+    }
   }
+
+  
 }
